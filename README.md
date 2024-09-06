@@ -1,9 +1,10 @@
 Use these to get exclusive LEGION features, available only on Windows.
 
- Currently has only 2,
-     conso  => this script allows the usage of conversation mode of LEGION laptops.
+ Currently has only 2.
             
-            Usage:  conso     -> to view current mode
+    Usage:  
+    
+    conso     -> to view current mode
                     conso on  -> to set the conservation mode  as ON
                     conso off -> to set the conservation mode  as OFF
 
