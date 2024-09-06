@@ -1,0 +1,24 @@
+#!/bin/bash
+if [ $# == 0 ]; then
+    data=$(</sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode)
+    # file="/sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode"
+    if [ $data == 0 ]; then
+        echo "Conservation mode -> OFF"
+        echo "Battery -> CHARGING"
+    elif [ $data == 1 ]; then
+        echo "Conservation mode -> ON"
+        echo "Battery -> NOT CHARGING"
+    fi
+    # echo "<---VIEW MODE--->"
+
+elif [ $1 == 'off' ]; then
+    sudo su -c 'echo 0 >/sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode'
+    echo "Conservation mode -> OFF"
+    echo "Battery -> CHARGING"
+
+elif [ $1 == 'on' ]; then
+    sudo su -c 'echo 1 >/sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode'
+    echo "Conservation mode -> ON"
+    echo "Battery -> NOT CHARGING"
+
+fi

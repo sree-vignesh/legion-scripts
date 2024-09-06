@@ -1,0 +1,15 @@
+#!/bin/bash
+wait=".5"
+if [ -n "$1" ]
+then
+wait=$1
+fi
+echo $wait
+while true
+do
+
+sudo su -c 'echo 0 > /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/leds/platform::kbd_backlight/brightness'
+sleep $wait
+sudo su -c 'echo 1 > /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/leds/platform::kbd_backlight/brightness'
+sleep $wait
+done
