@@ -1,6 +1,7 @@
 Use these to get exclusive LEGION features, available only on Windows.
 
  Currently has only 2.
+ Tested only on OpenSuse Tumbleweed, Lenovo Legion 5i (2020)
             
     Usage:  
     
